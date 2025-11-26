@@ -1,0 +1,6 @@
+[mgr]
+prepend_keymap=[
+  {on =["<Space>","g","g"], run='shell  "lazygit" --block',desc="Open LazyGit" },
+  {on =["<Space>","g","h","c"], run='shell  "gh repo create" --block',desc="Open LazyGit" },
+  {on =["<Space>","g","h","i"], run='shell  "gh issue list" --block',desc="Open LazyGit" }
+]
