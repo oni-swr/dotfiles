@@ -25,14 +25,19 @@ set $rofi_cmd rofi \
 # Shows a combined list of the applications with desktop files and
 # executables from PATH.
 # TODO: add window with the next release of rofi-wayland
-set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+#set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
+
+set $fuzzel_cmd fuzzel \
+        --terminal '$term'
+
+set $menu $fuzzel_cmd 
 exec dms run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg /usr/share/backgrounds/default.jxl fill
+#output * bg /usr/share/backgrounds/default.jxl fill
 #
 # Example configuration:
 #
@@ -211,6 +216,12 @@ bindsym $mod+r mode "resize"
 default_border pixel 5
 gaps outer 5
 gaps inner 5
+
+
+# trying to set opacity for all windows
+set $opacity 1
+for_window [class=".*"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
 #bar { 
 #     swaybar_command waybar
 #}
