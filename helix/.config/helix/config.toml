@@ -11,4 +11,12 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+# ~/.config/helix/config.toml
+[keys.normal.space.y]
+# Open file(s) in the current window
+y = ":sh tmux new-window -n fx '~/.config/helix/yazi-picker.fish open'"
+# Open file(s) in a vertical split
+v = ":sh tmux new-window -n fx '~/.config/helix/yazi-picker.fish vsplit'"
+# Open file(s) in a horizontal split
+h = ":sh tmux new-window -n fx '~/.config/helix/yazi-picker.fish hsplit'"
 
