@@ -9,4 +9,8 @@ if status is-interactive
    end  # Commands to run in interactive sessions can go here
 end
 set -gx EDITOR nvim
+function fish_greeting
+  fastfetch
+end
 starship init fish | source
+
