@@ -10,7 +10,6 @@ if status is-interactive
 end
 set -gx EDITOR nvim
 function fish_greeting
-  fastfetch
 end
 starship init fish | source
 
