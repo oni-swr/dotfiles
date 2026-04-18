@@ -48,4 +48,4 @@ theme= Gruvbox Material Dark
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 keybind = shift+enter=text:\x1b\r
-background-opacity = 0.95
+background-opacity = 0.9
